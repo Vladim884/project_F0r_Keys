@@ -4,34 +4,6 @@ let textres1 = document.getElementById('resulttext1');// textarea data
 let arr1 = [];
 let arr11 = [];
 let textsale;
-let qual_word = 'качество';
-
-let m = document.getElementById('m');
-let w = document.getElementById('w');
-let it = document.getElementById('it');
-let they = document.getElementById('they');
-
-m.onclick = function () {
-    qual_word = 'качественный';
-    let ar_str2 = str2.value.split(' ');
-    // ar_str2[4] = qual_word;
-    ar_str2.splice(4, 0, qual_word);
-    str2.value = ar_str2.join(' ');
-    let ar_string1 = string1.value.split(' ');
-    ar_string1.splice(3, 0, qual_word);
-    string1.value = ar_string1.join(' ');
-    m.disabled = true;
-}
-w.onclick = function () {
-    qual_word = 'качественная';
-}
-it.onclick = function () {
-    qual_word = 'качественное';
-}
-they.onclick = function () {
-    qual_word = 'качественные';
-}
-
 
 subm1.onclick = function(){
     let newstr1 = str1.replace(/,/gi, '');
