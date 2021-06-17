@@ -1,0 +1,143 @@
+.enerbox{
+    display: inline-block;
+    width: 180px;
+}
+.pultbox{
+    display: inline-block;
+    width: 100px;
+}
+.btnbox {
+    width: 100%;
+    padding: 2px;
+}
+.btnbox input {
+    width: 100%;
+}
+.fieldbox{
+    display: inline-block;
+
+}
+.wind {
+    width: 40%;
+    min-height: 100px;
+    border: 2px solid gray; 
+}
+.alert {
+    width: 100px;
+    height: 50px;
+    background: blue;
+}
+
+.green {
+    display: inline-block;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: #88c266;
+    border: 1px #71a34c solid;
+    color: #fff;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 1px;
+    padding: 5px 5px 4px;
+    word-wrap: break-word;
+    font-family: Arial,sans-serif;
+    cursor: pointer;
+}
+
+.hidden {
+    display:none;
+}
+
+.content-blocker {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(136, 136, 204, 0.5);
+    z-index: 4444;
+}
+
+.enterbox {
+    position: relative;
+    z-index: 1;
+}
+#entertext2{
+    margin-left: 45px;;
+}
+
+/* #copy{ */
+    /* display: none; */
+    /* position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2; */
+/* } */
+#paste{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+} 
+#replace {
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    z-index: 2;  
+}
+#delfirst{
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    z-index: 2;
+}
+#delsecond {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    z-index: 2;
+}
+#delthird {
+    position: absolute;
+    bottom: -75px;
+    left: 0;
+    z-index: 2;
+}
+#dellast1{
+    position: absolute;
+    bottom: 10px;
+    left: 115px;
+    z-index: 2;
+}
+#dellast {
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    z-index: 2;
+}
+#val1{
+    position: absolute;
+    bottom: -140px;
+    left: 0;
+    z-index: 2; 
+}
+#val2{
+    position: absolute;
+    bottom: -160px;
+    left: 0;
+    z-index: 2; 
+}
+#pult2 {
+    width: 150px;
+    display: inline-block;
+}
+
+/* .entertext2{
+    position: absolute;
+    left: 0;
+}  */
+
+td {
+    border: 1px solid black;
+}
