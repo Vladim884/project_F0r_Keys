@@ -15,6 +15,7 @@ let arfromstr;
 // let string1 = document.getElementById('entertext');
 // let str1;
 let str2 = document.getElementById('entertext2');
+// str2.value = '';
 // let str3 = document.getElementById('entertext3');
 let dellast1 = document.getElementById('dellast1');
 let copy = document.getElementById('copy');
@@ -39,7 +40,7 @@ var save_exel = document.getElementById('saveexel');//button save exele file
 // let wrongkey = document.getElementById('wrongkey');// for delete wrong phrases
 let keyword2 = document.getElementById('keyword2');
 let keyword3 = document.getElementById('keyword3');
-
+let keyword4 = document.getElementById('keyword4');
 // let textres1 = document.getElementById('resulttext1');// textarea data
 let textres2 = document.getElementById('resulttext2');// textarea data
 let textres3 = document.getElementById('resulttext3');// textarea data
@@ -68,6 +69,7 @@ scroll_top.addEventListener('click', backToTop);
 
 paste.onclick = function () {
     str2.value = string1.value;
+    subm1.disabled = false;
     // copy.classList.remove('hidden');
     // paste.classList.add('hidden');
 }
@@ -119,212 +121,6 @@ dellast1.onclick = function () {
     string1.value = arfromstr.join(' ');
     subm1.disabled = false;
 }
-
-
-
-  
-// subm.onclick = function(){
-//     stringIndex = displayed_ind.value;//index for first row
-//     wrongkey.value = 'hyttgfddxcvggbhnn';
-
-//     if (stringIndex >= allRows.length) {
-//         blocker.style.display = 'block';
-//     } 
-//     tr1 = allRows[stringIndex];//string now
-//     let row_cells=tr1.getElementsByTagName('td');
-//     // firstElementChild
-//     string1.value = row_cells[1].innerHTML.trim();// position name
-//     str1=string1.value;
-//     displayed_ind.innerHTML = stringIndex;
-// }
-
-// subm1.onclick = function(){
-//     let newstr1 = str1.replace(/,/gi, '');
-//     newstr1 = str1.replace(/[\n\r]/g, '')//remove line break
-
-//     newstr1 = newstr1.trim();
-//     var arrey1 = newstr1.split(" ");
-  
-// getTwoWords(arrey1);
-// // console.log(arr1);
-// arr1.length = 20;
-// textres1.value = arr1;
-// let string1 = textres1.value.replace(/,/g, ", ");
-// textres1.value = string1;
-// // keyword2.focus();
-// };
-
-// subm2.onclick = function(){
-//     var str2 = getElVal('entertext'); 
-//     var str22 = getElVal('entertext2');
-    
-//     let newstr2 = str2.replace(/,/gi, '');
-//     newstr2 = str2.replace(/[\n\r]/g, '')//remove line break
-
-//     let newstr22 = str22.replace(/,/gi, '');
-//     newstr22 = str22.replace(/[\n\r]/g, '')//remove line break
-
-//     newstr2 = newstr2.trim();
-//     newstr22 = newstr22.trim();
-//     var arrey2 = newstr2.split(" ");
-//     var arrey22 = newstr22.split(" ");
-//     // var arrey22 = [];
-//     // for (let i = 0; i < arrey2.length; i++) {
-//     //     if(i!=0)arrey22.push(arrey2[i]);
-        
-//     // }
-//     console.log(arrey22);
-// getThreeWords(arrey2, arr2);
-// getThreeWords(arrey22, arr22);
-// if(arr22.length != 0){
-//     arr2.length = 8;
-//     arr22.length = 8;
-// } else {
-//     arr2.length = 15;
-// }
-// arr23 = arr2.concat(arr22);
-
-// keyword2.value = keyword2.value.trim();//removing the first and last space
-// textres2.value = filterItems(keyword2.value, arr23);//filtering arr2 by the entered word in the input
-// let textar2 = textres2.value.replace(/,/g, ", ");
-// textres2.value = textar2;
-// // keyword3.focus();
-// };
-
-// subm3.onclick = function(){
-//     var str3 = getElVal('entertext');
-//     var str33 = getElVal('entertext2');
-//     let newstr3 = str3.replace(/,/gi, '');
-//     newstr3 = str3.replace(/[\n\r]/g, '')
-
-//     let newstr33 = str33.replace(/,/gi, '');
-//     newstr3 = newstr3.trim();
-//     newstr33 = newstr33.trim();
-//     var arrey3 = newstr3.split(" ");
-//     var arrey33 = newstr33.split(" ");
-//     // arrey3.length = 30;
-// getFourWords(arrey3, arr3);
-// getFourWords(arrey33, arr33);
-// if(arr33.length != 0){
-//     arr3.length = 5;
-//     arr33.length = 5;
-// } else {
-//     arr3.length = 10;
-// }
-// arr34 = arr3.concat(arr33);
-//     textres3.value = arr34;
-//     keyword3.value = keyword3.value.trim();//removing the first and last space
-//     textres3.value = filterItems(keyword3.value, arr34);//filtering key phrases by the entered word
-
-//     let textar3 = textres3.value.replace(/,/g, ", ");
-//     textres3.value = textar3;
-// };
-// subm4.onclick = function(){
-//     tr1 = allRows[stringIndex];//string now
-//     console.log(allRows[stringIndex]);
-//     cells_row=tr1.getElementsByTagName('td');
-//     console.log(cells_row);
-//     // firstElementChild
-//     old = cells_row[2].innerHTML;//
-//     oldkeys = old.replace(/,/g, ', ');
-//     console.log(old);
-//     textres4.value = GetFullText(fullText,  oldkeys + ', ', textres1.value +', ', textres2.value +', ', textres3.value);
-    
-
-//     let res_arrey = textres4.value.split(", ");
-//     console.log(res_arrey);
-//     res_arrey = res_arrey.filter(function(entry) { return entry.trim() != ''; });
-//     console.log(res_arrey);
-//     //=======
-//     for (let i = 0; i < res_arrey.length; i++) {//Removing key phrases with a wrong word
-//         let smallar = res_arrey[i].split(' ');
-//         for (let j = 0; j < smallar.length; j++) {
-//             if(smallar[j] === wrongkey.value 
-//                 || (smallar[j] === 'с' && j === 0) 
-//                 || (smallar[j] === 'с' && j === smallar.length-1)) {
-//                 res_arrey.splice(i, 1);
-//                 console.log(res_arrey);
-//                 if(i===0){i}else{i--}
-//                 break;
-//             }
-            
-//         }
-//     }
-//     console.log(res_arrey);
-
-
-//     //===
-//     uniq = res_arrey.reduce(function(a,b){
-//         if (a.indexOf(b) < 0 ) a.push(b);
-//         return a;
-//     },[]);
-//     console.log(uniq); // delete duplicates
-//     //====
-
-//     for (let index = 0; index < uniq.length; index++) {
-//         let str = "<span id=" + "i"+index + " class=" + "green" +">" + uniq[index] + "</span>";
-//         wind.innerHTML += str;
-//     }
-//     keys = wind.querySelectorAll('.green');
-//     console.log(typeof(keys));
-//     // keys.splice(0, 1);
-//     for (let i = 0; i < keys.length; i++) {// delete green span
-//         keys[i].addEventListener('click', function () {
-//             wind.removeChild(this);
-//         });
-//     }
-    
-// }
-
-// subm5.onclick = function () {
-//     console.log(keys_finish);
-//     cells_row[2].innerHTML = '';
-//     keys = wind.querySelectorAll('.green');
-//     for (let i = 0; i < keys.length; i++) {
-//         keys_finish.push(keys[i].innerHTML);
-//     };
-//     console.log(keys_finish);
-//     //==
-//     // var names = ["Mike","Matt","Nancy","Adam","Jenny","Nancy","Carl"];
-
-    
-//     //==
-//     cells_row[2].innerHTML = keys_finish;
-//     console.log(tr1);
-
-//     wind.innerHTML = '';
-//     keys_finish = [];
-    
-
-//     console.log(keys_finish);
-//     keyword2.value = '';
-//     keyword3.value = '';
-//     textres2.value = '';
-//     textres3.value = '';
-//     textres4.value = '';
-//     textres1.value = '';
-//     string1.value = '';
-//     str2.value = '';
-//     wrongkey.value = '';
-//     if (stringIndex < allRows.length) {
-//         stringIndex++;
-//         displayed_ind.value = stringIndex;
-//         console.log(displayed_ind);
-//     }  else {
-//         blocker.style.display = 'block';
-//     } 
-//     console.log(stringIndex);
-//     arr1 = [];
-//     arr2 = [];
-//     arr22 = [];
-//     arr3 = [];  
-//     arr33 = [];
-// }
-    
-  
-     
-  
-
 
 //==================================================================
 
@@ -428,7 +224,8 @@ function trackScroll() {
     }
   }
 
-  const phraseReplace = (arr, myphrase) => {// replace 1 word with a two-word phrase
+  // replace 1 word with a two-word phrase
+  var phraseReplace = (arr, myphrase) => {
     let newarr=[];
     let phr;
         for (let i = 0; i < arr.length; i++) {
@@ -436,8 +233,8 @@ function trackScroll() {
             let phr = arr[i].split(' ');
             for (let j = 0; j < phr.length; j++) {
                 if(ar_phrase[0] === phr[j] || ar_phrase[1] === phr[j]){
-                    xphr = phr[j] + ' ' + phr[j+1];
-                    yphr = phr[j - 1] + ' ' + phr[j] ;
+                    let xphr = phr[j] + ' ' + phr[j+1];
+                    let yphr = phr[j - 1] + ' ' + phr[j] ;
                     if (xphr === myphrase || yphr === myphrase){
                     newarr.push(arr[i]);
                     break;   
@@ -453,6 +250,37 @@ function trackScroll() {
         } 
         return newarr;
     }
+    var phraseThreeReplace = (arr1, myphrase1) => {
+        let newarr1=[];
+        let phr1;
+            for (let i = 0; i < arr1.length; i++) {
+                let ar_phrase1 = myphrase1.split(' ');
+                let phr1 = arr1[i].split(' ');
+                for (let j = 0; j < phr1.length; j++) {
+                    if(ar_phrase1[0] === phr1[j] || ar_phrase1[1] === phr1[j] || ar_phrase1[2] === phr1[j]){
+                        let xphr1 = phr1[j] + ' ' + phr1[j+1] + ' ' + phr1[j+2];
+                        let yphr1 = phr1[j - 1] + ' ' + phr1[j] + ' ' + phr1[j+1] ;
+                        let zphr1 = phr1[j - 2] + ' ' + phr1[j - 1] + ' ' + phr1[j]
+                        if (xphr1 === myphrase1 || yphr1 === myphrase1 || zphr1 === myphrase1){
+                        // newarr1.push(arr1[i]);
+                        break;   
+                        }else {
+                            // if(phr1[j+1] === ar_phrase[0] || phr1[j+1] === ar_phrase[1] || phr1[j+1] === ar_phrase[2]){
+                            //     phr1.slice(j+1, 1)
+                            // }
+                            phr1[j] = myphrase1;
+                            let phr2 = phr1.slice(0, j);
+                            arr1[i] = phr2.join(' ');
+                            newarr1.push(arr1[i]);
+                            // break; 
+                        };
+                    }
+                }
+                newarr1.push(arr1[i].trim());
+            } 
+            return newarr1;
+        }
+    
 
     const delUnnecessaryWord = function(array, word){
         for (let i = 0; i < array.length; i++) {

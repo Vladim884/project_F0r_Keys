@@ -22,28 +22,9 @@ subm4.onclick = function(){
     res_arrey = res_arrey.filter(function(entry) { return entry.trim() != ''; });//Удаление пустых или пробельных строк из массива
     console.log(res_arrey);
     //=======
-    // for (let i = 0; i < res_arrey.length; i++) {//Removing key phrases with a wrong word
-    //     let smallar = res_arrey[i].split(' ');
-    //     for (let j = 0; j < smallar.length; j++) {
-    //         if(smallar[j] === wrongkey.value 
-    //             || (smallar[j] === 'с' && j === 0) 
-    //             || (smallar[j] === 'с' && j === smallar.length-1)) {
-    //             // res_arrey.splice(i, 1);
-    //             smallar.splice(j, 1);
-    //             console.log(smallar);
-    //             res_arrey[i]=smallar.join(' ');
-    //             // if(i===0){i}else{i--}
-    //             break;
-    //         }
-            
-    //     }
-    // }
-    // console.log(res_arrey);
-    res_arrey = phraseReplace(res_arrey, keyword2.value);
-    res_arrey = phraseReplace(res_arrey, keyword3.value);
-    
-    // keyword3.value
-
+    res_arrey = phraseReplace(res_arrey, keyword2.value);//replace 1 word on phrase with 2 words
+    res_arrey = phraseReplace(res_arrey, keyword3.value);//replace 1 word on phrase with 2 words
+    res_arrey = phraseThreeReplace(res_arrey, keyword4.value);//replace 1 word on phrase with 3 words
     //===
     uniq = res_arrey.reduce(function(a,b){
         if (a.indexOf(b) < 0 ) a.push(b);

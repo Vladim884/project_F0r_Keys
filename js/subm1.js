@@ -4,6 +4,33 @@ let textres1 = document.getElementById('resulttext1');// textarea data
 let arr1 = [];
 let arr11 = [];
 let textsale;
+let qual_word = 'качество';
+
+let m = document.getElementById('m');
+let w = document.getElementById('w');
+let it = document.getElementById('it');
+let they = document.getElementById('they');
+
+m.onclick = function () {
+    qual_word = 'качественный';
+    let ar_str2 = str2.value.split(' ');
+    // ar_str2[4] = qual_word;
+    ar_str2.splice(4, 0, qual_word);
+    str2.value = ar_str2.join(' ');
+    let ar_string1 = string1.value.split(' ');
+    ar_string1.splice(3, 0, qual_word);
+    string1.value = ar_string1.join(' ');
+    m.disabled = true;
+}
+w.onclick = function () {
+    qual_word = 'качественная';
+}
+it.onclick = function () {
+    qual_word = 'качественное';
+}
+they.onclick = function () {
+    qual_word = 'качественные';
+}
 
 
 subm1.onclick = function(){
@@ -19,8 +46,8 @@ subm1.onclick = function(){
 getTwoWords(arrey1, arr1);
 getTwoWords(arrey11, arr11);
 console.log(arr11);
-arr1.length = 7;
-arr11.length = 5;
+arr1.length = 8;
+arr11.length = 8;
 console.log(typeof(arr1.join(', ')));
 textres1.value = arr1.concat(arr11);
 let string1 = textres1.value.replace(/,/g, ", ");
@@ -38,14 +65,15 @@ if(cells_row[2].innerHTML === '<br>'){
 newstr1 = arrey1.join(' ');
 textsale = ', '+ newstr1 +', ' 
 + cells_row[1].innerHTML + ', '
-+ cells_row[3].innerHTML + ', ' 
-+ cells_row[3].innerHTML  + ' качество, ' 
-+ 'качество ' +  cells_row[3].innerHTML + ', '
- + cells_row[2].innerHTML + ' качество, '
-+ 'качество ' + cells_row[2].innerHTML + ', '
-+ arrey1[0] + ' ' + arrey1[1] + ' качество, '
-+ 'купить ' + arrey1[0] + ' ' + arrey1[1] + ', '
- + arrey1[0] + ' ' + arrey1[1] + ' 2021' + ', '
++ cells_row[3].innerHTML + ', '
++ cells_row[3].innerHTML + ' 2021, ' 
+// + cells_row[3].innerHTML  + ' ' + qual_word + ', ' 
+// + qual_word + ' ' +  cells_row[3].innerHTML + ', '
+//  + cells_row[2].innerHTML + ' ' + qual_word + ', '
+// + qual_word + ' ' + cells_row[2].innerHTML + ', '
+// + arrey1[0] + ' ' + arrey1[1] + ' ' + qual_word + ', '
+// + qual_word + ' ' + arrey1[0] + ' ' + arrey1[1] + ', '
+ + arrey1[0] + ' ' + arrey1[1] + ' 2021, '
 + arrey1[1] + ' ' + arrey1[0] + ' 2021, ';
 
 
@@ -53,6 +81,7 @@ textres1.value = string1 + textsale;
 subm2.onclick();
 subm3.onclick();
 subm4.onclick();
+m.disabled = false;
 };
 
 let getTwoWords = function (arrey, arr_1) {

@@ -64,16 +64,15 @@
     z-index: 1;
 }
 #entertext2{
-    margin-left: 45px;;
+    margin-left: 90px;;
 }
 
-/* #copy{ */
-    /* display: none; */
-    /* position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 2; */
-/* } */
+#keyword2{
+    margin-bottom: 10px;
+}
+#keyword4{
+    margin-bottom: 10px;
+}
 #paste{
     position: absolute;
     bottom: 0;
@@ -112,21 +111,47 @@
 }
 #dellast {
     position: absolute;
-    bottom: -100px;
-    left: 0;
+    bottom: -25px;
+    left: 47px;
     z-index: 2;
 }
-#val1{
+
+#val1 {
     position: absolute;
-    bottom: -140px;
-    left: 0;
-    z-index: 2; 
+    bottom: -50px;
+    left: 47px;
+    z-index: 2;
 }
 #val2{
     position: absolute;
-    bottom: -160px;
-    left: 0;
+    bottom: -75px;
+    left: 47px;
     z-index: 2; 
+}
+
+#m {
+    position: absolute;
+    bottom: -105px;
+    left: 0;
+    z-index: 2;
+}
+#w {
+    position: absolute;
+    bottom: -105px;
+    left: 30px;
+    z-index: 2;
+}
+#it {
+    position: absolute;
+    bottom: -105px;
+    left: 60px;
+    z-index: 2;
+}
+#they {
+    position: absolute;
+    bottom: -130px;
+    left: 0;
+    z-index: 2;
 }
 #pult2 {
     width: 150px;

@@ -21,6 +21,7 @@ subm5.onclick = function () {
     console.log(keys_finish);
     keyword2.value = '';
     keyword3.value = '';
+    keyword4.value = '';
     textres2.value = '';
     textres3.value = '';
     textres4.value = '';
