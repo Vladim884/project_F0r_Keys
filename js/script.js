@@ -1,6 +1,7 @@
 var uniq; // for arrey without duplicates
 // var displayed_ind = document.getElementById('viewind');
 // let arr1 = [];
+let flag_replace;
 let arr2 = [];
 let arr22 = [];
 let arr23 = [];
@@ -74,6 +75,7 @@ paste.onclick = function () {
     // paste.classList.add('hidden');
 }
 replace.onclick = function name() {
+    flag_replace = true;
     arfromstr = str2.value.split(' ');
     let remember = arfromstr[0];
     arfromstr[0] = arfromstr[1];

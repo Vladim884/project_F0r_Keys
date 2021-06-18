@@ -6,6 +6,8 @@ let arr11 = [];
 let textsale;
 
 subm1.onclick = function(){
+    // document.getElementById('entertext');
+    // str1=string1.value;
     let newstr1 = str1.replace(/,/gi, '');
     str1 = newstr1.replace(/[\n\r]/g, '')//remove line break
 
@@ -16,12 +18,13 @@ subm1.onclick = function(){
     console.log(arrey1);
   
 getTwoWords(arrey1, arr1);
-getTwoWords(arrey11, arr11);
-console.log(arr11);
-arr1.length = 8;
-arr11.length = 8;
-console.log(typeof(arr1.join(', ')));
-textres1.value = arr1.concat(arr11);
+// getTwoWords(arrey11, arr11);
+// console.log(arr11);
+arr1.length = 15;
+// arr11.length = 8;
+// console.log(typeof(arr1.join(', ')));
+// textres1.value = arr1.concat(arr11);
+textres1.value = arr1;
 let string1 = textres1.value.replace(/,/g, ", ");
 // textres1.value = string1;
 // keyword2.focus();
@@ -39,6 +42,8 @@ textsale = ', '+ newstr1 +', '
 + cells_row[1].innerHTML + ', '
 + cells_row[3].innerHTML + ', '
 + cells_row[3].innerHTML + ' 2021, ' 
++ cells_row[3].innerHTML + ' пром, '
++ cells_row[3].innerHTML + ' Украина, '
 // + cells_row[3].innerHTML  + ' ' + qual_word + ', ' 
 // + qual_word + ' ' +  cells_row[3].innerHTML + ', '
 //  + cells_row[2].innerHTML + ' ' + qual_word + ', '
@@ -53,14 +58,17 @@ textres1.value = string1 + textsale;
 subm2.onclick();
 subm3.onclick();
 subm4.onclick();
+// subm5.onclick();
 m.disabled = false;
 };
 
 let getTwoWords = function (arrey, arr_1) {
-    for (let j=0; j < arrey.length; j++){
-        for (let index = j + 1; index < arrey.length; index++) {
-            arr_1.push(arrey[j] + ' ' + arrey[index]);
-        }
+    for (let j=1; j < arrey.length; j++){
+        // for (let index = j + 1; index < arrey.length; index++) {
+        //     arr_1.push(arrey[j] + ' ' + arrey[index]);
+        // }
+        arr_1.push(arrey[0] + ' ' + arrey[j]);
+        arr_1.push(arrey[j] + ' ' + arrey[0])
     }
     // arr1.length = 11;
 }

@@ -1,4 +1,4 @@
-let qual_word = 'качество';
+let qual_word = 'пром украина';
 
 let m = document.getElementById('m');
 let w = document.getElementById('w');
@@ -6,7 +6,7 @@ let it = document.getElementById('it');
 let they = document.getElementById('they');
 
 m.onclick = function () {
-    qual_word = 'качественный';
+    // qual_word = 'отзывы';
     let ar_str2 = str2.value.split(' ');
     // ar_str2[4] = qual_word;
     ar_str2.splice(4, 0, qual_word);
@@ -17,7 +17,7 @@ m.onclick = function () {
     // m.disabled = true;
 }
 w.onclick = function () {
-    qual_word = 'качественная';
+    // qual_word = 'качественная';
     let ar_str2 = str2.value.split(' ');
     // ar_str2[4] = qual_word;
     ar_str2.splice(4, 0, qual_word);
@@ -28,7 +28,7 @@ w.onclick = function () {
     // w.disabled = true;
 }
 it.onclick = function () {
-    qual_word = 'качественное';
+    // qual_word = 'качественное';
     let ar_str2 = str2.value.split(' ');
     // ar_str2[4] = qual_word;
     ar_str2.splice(4, 0, qual_word);
@@ -39,7 +39,7 @@ it.onclick = function () {
     // it.disabled = true;
 }
 they.onclick = function () {
-    qual_word = 'качественные';
+    // qual_word = 'качественные';
     let ar_str2 = str2.value.split(' ');
     // ar_str2[4] = qual_word;
     ar_str2.splice(4, 0, qual_word);

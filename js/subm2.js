@@ -12,6 +12,7 @@ subm2.onclick = function(){
     newstr22 = newstr22.trim();
     var arrey2 = newstr2.split(" ");
     var arrey22 = newstr22.split(" ");
+    var arr22 = [];
     // var arrey22 = [];
     // for (let i = 0; i < arrey2.length; i++) {
     //     if(i!=0)arrey22.push(arrey2[i]);
@@ -19,7 +20,13 @@ subm2.onclick = function(){
     // }
     console.log(arrey22);
 getThreeWords(arrey2, arr2);
-getThreeWords(arrey22, arr22);
+if (flag_replace) {
+    for (let i = 2; i < arrey22.length; i++) {
+        arr22.push(arrey22[0] + ' ' + arrey22[1] + ' ' + arrey22[i]);
+    }
+} else {
+    getThreeWords(arrey22, arr22);
+}
 if(arr22.length != 0){
     arr2.length = 10;
     arr22.length = 10;
