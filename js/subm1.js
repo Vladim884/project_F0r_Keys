@@ -6,8 +6,8 @@ let arr11 = [];
 let textsale;
 
 subm1.onclick = function(){
-    // document.getElementById('entertext');
-    // str1=string1.value;
+    let str_first = document.getElementById('entertext');
+    str1=str_first.value;
     let newstr1 = str1.replace(/,/gi, '');
     str1 = newstr1.replace(/[\n\r]/g, '')//remove line break
 

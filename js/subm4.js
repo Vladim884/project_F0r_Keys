@@ -15,7 +15,7 @@ subm4.onclick = function(){
     oldkeys = old.replace(/,/g, ', ');
     console.log(old);
     textres4.value = GetFullText(fullText,  oldkeys + ', ', textres1.value +', ', textres2.value +', ', textres3.value);
-    
+    textres4.value = textres4.value.toLowerCase();
 
     let res_arrey = textres4.value.split(", ");
     console.log(res_arrey);

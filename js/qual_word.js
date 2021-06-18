@@ -1,4 +1,4 @@
-let qual_word = 'пром украина';
+let qual_word = 'пром украина 2021';
 
 let m = document.getElementById('m');
 let w = document.getElementById('w');

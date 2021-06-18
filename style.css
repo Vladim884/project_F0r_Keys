@@ -116,6 +116,14 @@
     z-index: 2;
 }
 
+
+#replace0 {
+    position: absolute;
+    top: -21px;
+    left: 0px;
+    z-index: 2;
+}
+
 #val1 {
     position: absolute;
     bottom: -50px;
@@ -125,6 +133,12 @@
 #val2{
     position: absolute;
     bottom: -75px;
+    left: 47px;
+    z-index: 2; 
+}
+#val3{
+    position: absolute;
+    bottom: -100px;
     left: 47px;
     z-index: 2; 
 }

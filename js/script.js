@@ -13,7 +13,7 @@ let fullText = '';
 let i = 0;
 let arfromstr;
 
-// let string1 = document.getElementById('entertext');
+let st1 = document.getElementById('entertext');
 // let str1;
 let str2 = document.getElementById('entertext2');
 // str2.value = '';
@@ -25,10 +25,11 @@ let replace = document.getElementById('replace');
 let delfirst = document.getElementById('delfirst');
 let delsecond = document.getElementById('delsecond');
 let delthird = document.getElementById('delthird');
+let replace0 = document.getElementById('replace0');
 let dellast = document.getElementById('dellast');
 let val1 = document.getElementById('val1');
 let val2 = document.getElementById('val2');
-
+let val3 = document.getElementById('val3');
 
 // var subm = document.getElementById('sub');//button start
 // var subm1 = document.getElementById('sub1');//button start
@@ -74,6 +75,13 @@ paste.onclick = function () {
     // copy.classList.remove('hidden');
     // paste.classList.add('hidden');
 }
+replace0.onclick = function () {
+    let arfromstr0 = st1.value.split(' ');
+    let remember0 = arfromstr0[0];
+    arfromstr0[0] = arfromstr0[1];
+    arfromstr0[1] = remember0;
+    st1.value = arfromstr0.join(' ');
+}
 replace.onclick = function name() {
     flag_replace = true;
     arfromstr = str2.value.split(' ');
@@ -83,10 +91,17 @@ replace.onclick = function name() {
     str2.value = arfromstr.join(' ');
 }
 val1.onclick = function () {
-    keyword2.value = str2.value;
+    // keyword2.value = str2.value.toLowerCase();
+
+    keyword2.value = str2.value.substring(str2.selectionStart, str2.selectionEnd).toLowerCase();;
 }
 val2.onclick = function () {
-    keyword3.value = str2.value;
+    // str2.value = str2.value.toLowerCase();
+    keyword3.value = str2.value.substring(str2.selectionStart, str2.selectionEnd).toLowerCase();;
+}
+val3.onclick = function () {
+    // str2.value = str2.value.toLowerCase();
+    keyword4.value = str2.value.substring(str2.selectionStart, str2.selectionEnd).toLowerCase();;
 }
 
 
@@ -109,6 +124,7 @@ delthird.onclick = function () {
     str2.value = arfromstr.join(' ');
     subm1.disabled = false;
 }
+
 dellast.onclick = function () {
     let arfromstr = str2.value.split(' ');
     let lastelnum = arfromstr.length-1;
