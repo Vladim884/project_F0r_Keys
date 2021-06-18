@@ -38,12 +38,13 @@ if(cells_row[2].innerHTML === '<br>'){
 }
 // arrey1.splice(arrey1.length-1, 1);
 newstr1 = arrey1.join(' ');
-textsale = ', '+ newstr1 +', ' 
-+ cells_row[1].innerHTML + ', '
-+ cells_row[3].innerHTML + ', '
-+ cells_row[3].innerHTML + ' 2021, ' 
-+ cells_row[3].innerHTML + ' пром, '
-+ cells_row[3].innerHTML + ' Украина, '
+textsale = 
+', '+ newstr1 +', ' 
+// + cells_row[1].innerHTML + ', '
+// + cells_row[3].innerHTML + ', '
+// + cells_row[3].innerHTML + ' 2021, ' 
+// + cells_row[3].innerHTML + ' пром, '
+// + cells_row[3].innerHTML + ' Украина, '
 // + cells_row[3].innerHTML  + ' ' + qual_word + ', ' 
 // + qual_word + ' ' +  cells_row[3].innerHTML + ', '
 //  + cells_row[2].innerHTML + ' ' + qual_word + ', '
@@ -59,6 +60,7 @@ subm2.onclick();
 subm3.onclick();
 subm4.onclick();
 // subm5.onclick();
+
 m.disabled = false;
 };
 
