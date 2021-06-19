@@ -25,4 +25,5 @@ subm.onclick = function(){
     str1=string1.value;
     displayed_ind.innerHTML = stringIndex;
     subm.disabled = true;
+    paste.onclick();
 }

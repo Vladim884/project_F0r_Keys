@@ -25,7 +25,9 @@ subm4.onclick = function(){
     //=======
     res_arrey = phraseReplace(res_arrey, keyword2.value);//replace 1 word on phrase with 2 words
     res_arrey = phraseReplace(res_arrey, keyword3.value);//replace 1 word on phrase with 2 words
+    res_arrey = phraseReplace(res_arrey, keyword_3.value);//replace 1 word on phrase with 2 words
     res_arrey = phraseThreeReplace(res_arrey, keyword4.value);//replace 1 word on phrase with 3 words
+    res_arrey = phraseThreeReplace(res_arrey, keyword44.value);//replace 1 word on phrase with 3 words
     //===
    
     //====
