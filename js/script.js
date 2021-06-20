@@ -28,12 +28,7 @@ let delsecond = document.getElementById('delsecond');
 let delthird = document.getElementById('delthird');
 let replace0 = document.getElementById('replace0');
 let dellast = document.getElementById('dellast');
-// let val1 = document.getElementById('val1');
-// let val2 = document.getElementById('val2');
-// let val_3 = document.getElementById('val_3');
-// let val3 = document.getElementById('val3');
-// let val4 = document.getElementById('val4');
-
+let wsp1 = document.getElementById('wsp1');
 
 // var subm = document.getElementById('sub');//button start
 // var subm1 = document.getElementById('sub1');//button start
@@ -43,13 +38,6 @@ var subm5 = document.getElementById('sub5');//button start
 var scroll_top = document.getElementById('scrolltop');//scroll top
 var save_exel = document.getElementById('saveexel');//button save exele file
 
-// let wrongkey = document.getElementById('wrongkey');// for delete wrong phrases
-// let keyword2 = document.getElementById('keyword2');
-// let keyword3 = document.getElementById('keyword3');
-// let keyword_3 = document.getElementById('keyword_3');
-// let keyword4 = document.getElementById('keyword4');
-// let keyword44 = document.getElementById('keyword44');
-// let textres1 = document.getElementById('resulttext1');// textarea data
 let textres2 = document.getElementById('resulttext2');// textarea data
 let textres3 = document.getElementById('resulttext3');// textarea data
 
@@ -60,20 +48,11 @@ var table1 = document.getElementById("tableId");
 let tr1;
 let cells_row;
 
-// let blocker = document.getElementById("blocker");//page blocker
-
 save_exel.onclick = function () {
     tableToExcel('tableId','Загрузочный_файл', 'Ключевые_запросы.xls');
 }
 window.addEventListener('scroll', trackScroll);
 scroll_top.addEventListener('click', backToTop); 
-
-// copy.onclick = function () {
-//     string1.select();// Select the text field
-//   document.execCommand("copy");//Copy the text inside the text field
-//   copy.classList.add('hidden');
-//   paste.classList.remove('hidden');
-// }
 
 paste.onclick = function () {
     str2.value = string1.value;
@@ -96,29 +75,13 @@ replace.onclick = function name() {
     arfromstr[1] = remember;
     str2.value = arfromstr.join(' ');
 }
-// val1.onclick = function () {
-//     val1.disabled = true;
-//     keyword2.value = str2.value.substring(str2.selectionStart, str2.selectionEnd).toLowerCase();
-// }
-// val2.onclick = function () {
-//     keyword3.value = str2.value.substring(str2.selectionStart, str2.selectionEnd).toLowerCase();
-//     val2.disabled = true;
-// }
-// val_3.onclick = function () {
-//     // str2.value = str2.value.toLowerCase();
-//     keyword_3.value = str2.value.substring(str2.selectionStart, str2.selectionEnd).toLowerCase();
-//     val_3.disabled = true;
-// }
-// val3.onclick = function () {
-//     // str2.value = str2.value.toLowerCase();
-//     keyword4.value = str2.value.substring(str2.selectionStart, str2.selectionEnd).toLowerCase();
-//     val3.disabled = true;
-// }
-// val4.onclick = function () {
-//     // str2.value = str2.value.toLowerCase();
-//     keyword44.value = str2.value.substring(str2.selectionStart, str2.selectionEnd).toLowerCase();
-//     val4.disabled = true;
-// }
+
+wsp1.onclick = function () {
+    let arfromstr = st1.value.split(' ');
+    let newel = arfromstr[0]+'&nbsp;'+arfromstr[1];
+    arfromstr.splice(0, 2, newel);
+    st1.value = arfromstr.join(' ');
+}
 
 delfirst0.onclick= function () {
     let arfromstr = st1.value.split(' ');

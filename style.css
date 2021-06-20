@@ -154,7 +154,7 @@
     bottom: -125px;
     left: 47px;
     z-index: 2;
-    background: blue;
+    background: rgb(135, 135, 226);
     /* color: #fff;  */
 }
 #val4{
@@ -162,7 +162,7 @@
     bottom: -150px;
     left: 47px;
     z-index: 2;
-    background: blue;
+    background: rgb(135, 135, 226);
     /* color: #fff;  */
 }
 
@@ -223,14 +223,14 @@
 #res5 {
     top: 130px;
 }
-.res1 {
-    top: 10;
+#wsp1 {
+    position: absolute;
+    top: -21px;
+    left: 164px;
+    z-index: 2;
 }
 
-/* .entertext2{
-    position: absolute;
-    left: 0;
-}  */
+
 
 td {
     border: 1px solid black;

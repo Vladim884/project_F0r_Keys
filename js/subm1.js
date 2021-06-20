@@ -51,8 +51,8 @@ textsale =
 // + qual_word + ' ' + cells_row[2].innerHTML + ', '
 // + arrey1[0] + ' ' + arrey1[1] + ' ' + qual_word + ', '
 // + qual_word + ' ' + arrey1[0] + ' ' + arrey1[1] + ', '
- + arrey1[0] + ' ' + arrey1[1] + ' 2021, '
-+ arrey1[1] + ' ' + arrey1[0] + ' 2021, ';
+ + arrey1[0] + ' ' + arrey1[1] + ' 2021 тренд, '
++ arrey1[1] + ' ' + arrey1[0] + ' 2021 тренд, ';
 
 
 textres1.value = string1 + textsale;
