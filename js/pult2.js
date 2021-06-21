@@ -18,7 +18,7 @@ let res5 = document.getElementById('res5');
 
 let deng = document.getElementById('deng');
 
-let butvalOnClick = function (bval, bres, ftext, blockdang) {
+let butval2OnClick = function (bval, bres, ftext, blockdang) {
     bval.disabled = true;
     bres.disabled = false;
     let newval = str2.value.substring(str2.selectionStart, str2.selectionEnd);
@@ -35,29 +35,51 @@ let butvalOnClick = function (bval, bres, ftext, blockdang) {
     ftext.value = ftext.value.trim();
     
 }
+let butval3OnClick = function (bval, bres, ftext, blockdang) {
+    bval.disabled = true;
+    bres.disabled = false;
+    let newval = str2.value.substring(str2.selectionStart, str2.selectionEnd);
+    newval = newval.trim();
+    let newvalarr = newval.split(' ');
+    if (newvalarr.length < 3 || newvalarr.length>3) {
+        ftext.value = 'DANGER!!!';
+        ftext.classList.add("danger");
+        blockdang.classList.remove('hidden');
+        return
+    }
+    ftext.value = newval;
+    ftext.value = ftext.value.toLowerCase();
+    ftext.value = ftext.value.trim();
+}
 
 val1.onclick = function () {
-    butvalOnClick(val1, res1, keyword2, deng);
+    butval2OnClick(val1, res1, keyword2, deng);
 }
 val2.onclick = function () {
-    butvalOnClick(val2, res2, keyword3, deng);
+    butval2OnClick(val2, res2, keyword3, deng);
 }
 val_3.onclick = function () {
-    butvalOnClick(val_3, res3, keyword_3, deng);
+    butval2OnClick(val_3, res3, keyword_3, deng);
 }
 val3.onclick = function () {
-    keyword4.value = str2.value.substring(str2.selectionStart, str2.selectionEnd);
-    keyword4.value = keyword4.value.toLowerCase();
-    keyword4.value = keyword4.value.trim();
-    val3.disabled = true;
+    butval3OnClick(val3, res4, keyword4, deng);
 }
 val4.onclick = function () {
-    // str2.value = str2.value.toLowerCase();
-    keyword44.value = str2.value.substring(str2.selectionStart, str2.selectionEnd);
-    keyword44.value = keyword44.value.toLowerCase();
-    keyword44.value = keyword44.value.trim();
-    val4.disabled = true;
+    butval3OnClick(val4, res5, keyword44, deng);
 }
+
+    // keyword4.value = str2.value.substring(str2.selectionStart, str2.selectionEnd);
+    // keyword4.value = keyword4.value.toLowerCase();
+    // keyword4.value = keyword4.value.trim();
+    // val3.disabled = true;
+// }
+// val4.onclick = function () {
+    // str2.value = str2.value.toLowerCase();
+//     keyword44.value = str2.value.substring(str2.selectionStart, str2.selectionEnd);
+//     keyword44.value = keyword44.value.toLowerCase();
+//     keyword44.value = keyword44.value.trim();
+//     val4.disabled = true;
+// }
 
 let resetOnClick = (field, butN, resN, blockdeng) => {
     field.value = '';
@@ -80,8 +102,8 @@ res3.onclick = function () {
 }
 
 res4.onclick = function () {
-    resetOnClick(keyword4, val3);
+    resetOnClick(keyword4, val3, res4, deng);
 }
 res5.onclick = function () {
-    resetOnClick(keyword44, val4);
+    resetOnClick(keyword44, val4, res5, deng);
 }
