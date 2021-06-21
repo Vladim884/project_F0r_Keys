@@ -38,8 +38,7 @@ if(cells_row[2].innerHTML === '<br>'){
 }
 // arrey1.splice(arrey1.length-1, 1);
 newstr1 = arrey1.join(' ');
-textsale = 
-', '+ newstr1 +', ' 
+textsale = arrey1[0]+ ', '+ newstr1 + ', '
 // + cells_row[1].innerHTML + ', '
 // + cells_row[3].innerHTML + ', '
 // + cells_row[3].innerHTML + ' 2021, ' 
@@ -55,13 +54,18 @@ textsale =
 + arrey1[1] + ' ' + arrey1[0] + ' 2021 тренд, ';
 
 
-textres1.value = string1 + textsale;
+textres1.value = textsale + string1;
 subm2.onclick();
 subm3.onclick();
 subm4.onclick();
-// subm5.onclick();
+(!!(document.getElementById('labeled_1').checked)) && subm5.onclick();
+val1.disabled = false;
+val2.disabled = false;
+val_3.disabled = false;
+val3.disabled = false;
+val4.disabled = false;
 
-m.disabled = false;
+// m.disabled = false;
 };
 
 let getTwoWords = function (arrey, arr_1) {

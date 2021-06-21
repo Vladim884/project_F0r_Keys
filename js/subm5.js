@@ -1,5 +1,6 @@
+
 subm5.onclick = function () {
-    console.log(keys_finish);
+    // console.log(keys_finish);
     cells_row[2].innerHTML = '';
     keys = wind.querySelectorAll('.green');
     for (let i = 0; i < keys.length; i++) {
@@ -8,6 +9,7 @@ subm5.onclick = function () {
     console.log(keys_finish);
     //==
     cells_row[2].innerHTML = keys_finish.join(', ');
+    
     // cells_row[2].innerHTML = cells_row[2].innerHTML.slice(0,1024);
     // typeof(cells_row[2].innerHTML);
 //     
@@ -19,7 +21,9 @@ subm5.onclick = function () {
 
     console.log(keys_finish);
     keyword2.value = '';
+    keyword_3.value = '';
     keyword3.value = '';
+    keyword44.value = '';
     keyword4.value = '';
     textres2.value = '';
     textres3.value = '';

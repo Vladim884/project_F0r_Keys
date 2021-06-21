@@ -37,9 +37,9 @@ subm4.onclick = function(){
     + cells_row[1].innerHTML + ', '
     + cells_row[3].innerHTML + ', '
     + cells_row[3].innerHTML + ' 2021, ' 
-    + cells_row[3].innerHTML + ' пром, '
+    + cells_row[3].innerHTML + ' тренд, '
     + cells_row[3].innerHTML + ' Украина, '
-    + cells_row[2].innerHTML + ', '
+    // + cells_row[2].innerHTML + ', '
     + res_arrey.join(', ');
     console.log(bigtext);
     let arrlast = bigtext.split(', ');

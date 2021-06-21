@@ -293,21 +293,21 @@ function trackScroll() {
         return array;
     }
 
-    let delUnnecessarySign = function(str, sign1, sign2){// delete sign from word
-        let newarr = str.split(', ');
-        for (let i = 0; i < newarr.length; i++) {
-            let arfromword = newarr[i].split('');
-           console.log(arfromword);
-           for (let j = 0; j < arfromword.length; j++) {
-               if(arfromword[j] === sign1 || arfromword[j] === sign2){
-                arfromword.splice(j, 1);
-               }else{continue}
-           }
-           str=arfromword.join('');
-           console.log(str);
-        }
-        return str;
-    }
+    // let delUnnecessarySign = function(str, sign1, sign2){// delete sign from word
+    //     let newarr = str.split(', ');
+    //     for (let i = 0; i < newarr.length; i++) {
+    //         let arfromword = newarr[i].split('');
+    //        console.log(arfromword);
+    //        for (let j = 0; j < arfromword.length; j++) {
+    //            if(arfromword[j] === sign1 || arfromword[j] === sign2){
+    //             arfromword.splice(j, 1);
+    //            }else{continue}
+    //        }
+    //        str=arfromword.join('');
+    //        console.log(str);
+    //     }
+    //     return str;
+    // }
 
     
 

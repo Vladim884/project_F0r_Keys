@@ -16,43 +16,67 @@ let res3 = document.getElementById('res3');
 let res4 = document.getElementById('res4');
 let res5 = document.getElementById('res5');
 
+let deng = document.getElementById('deng');
+
+let butvalOnClick = function (bval, bres, ftext, blockdang) {
+    bval.disabled = true;
+    bres.disabled = false;
+    let newval = str2.value.substring(str2.selectionStart, str2.selectionEnd);
+    newval = newval.trim();
+    let newvalarr = newval.split(' ');
+    if (newvalarr.length < 2 || newvalarr.length>2) {
+        ftext.value = 'DANGER!!!';
+        ftext.classList.add("danger");
+        blockdang.classList.remove('hidden');
+        return
+    }
+    ftext.value = newval;
+    ftext.value = ftext.value.toLowerCase();
+    ftext.value = ftext.value.trim();
+    
+}
+
 val1.onclick = function () {
-    val1.disabled = true;
-    keyword2.value = str2.value.substring(str2.selectionStart, str2.selectionEnd).toLowerCase();
+    butvalOnClick(val1, res1, keyword2, deng);
 }
 val2.onclick = function () {
-    keyword3.value = str2.value.substring(str2.selectionStart, str2.selectionEnd).toLowerCase();
-    val2.disabled = true;
+    butvalOnClick(val2, res2, keyword3, deng);
 }
 val_3.onclick = function () {
-    // str2.value = str2.value.toLowerCase();
-    keyword_3.value = str2.value.substring(str2.selectionStart, str2.selectionEnd).toLowerCase();
-    val_3.disabled = true;
+    butvalOnClick(val_3, res3, keyword_3, deng);
 }
 val3.onclick = function () {
-    // str2.value = str2.value.toLowerCase();
-    keyword4.value = str2.value.substring(str2.selectionStart, str2.selectionEnd).toLowerCase();
+    keyword4.value = str2.value.substring(str2.selectionStart, str2.selectionEnd);
+    keyword4.value = keyword4.value.toLowerCase();
+    keyword4.value = keyword4.value.trim();
     val3.disabled = true;
 }
 val4.onclick = function () {
     // str2.value = str2.value.toLowerCase();
-    keyword44.value = str2.value.substring(str2.selectionStart, str2.selectionEnd).toLowerCase();
+    keyword44.value = str2.value.substring(str2.selectionStart, str2.selectionEnd);
+    keyword44.value = keyword44.value.toLowerCase();
+    keyword44.value = keyword44.value.trim();
     val4.disabled = true;
 }
 
-let resetOnClick = function (field, but) {
+let resetOnClick = (field, butN, resN, blockdeng) => {
     field.value = '';
-    but.disabled = false;
+    butN.disabled = false;
+    // butN.classList.remove("danger");
+    field.classList.remove("danger");
+    resN.disabled = true;
+    blockdeng.classList.add('hidden');
 }
 
 res1.onclick = function () {
-    resetOnClick(keyword2, val1);
+    resetOnClick(keyword2, val1, res1, deng);
 } 
 res2.onclick = function () {
-    resetOnClick(keyword3, val2);
+    resetOnClick(keyword3, val2, res2, deng);
 }
 res3.onclick = function () {
-    resetOnClick(keyword_3, val_3);
+    resetOnClick(keyword_3, val_3, res3, deng);
+    // resetOnClick(keyword_3, val_3);
 }
 
 res4.onclick = function () {

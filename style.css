@@ -1,3 +1,7 @@
+.danger{
+    border: 2px solid red;
+}
+
 .enerbox{
     display: inline-block;
     width: 180px;
@@ -230,8 +234,21 @@
     z-index: 2;
 }
 
-
-
 td {
     border: 1px solid black;
+}
+
+.fieldbox {
+    position: relative;
+}
+
+#deng {
+    position: absolute;
+    left: 94px;
+    top: 14px;
+    background: red;
+    opacity: 50%;
+    width: 160px;
+    height: 151px;
+    z-index: 4;
 }
