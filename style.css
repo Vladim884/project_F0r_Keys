@@ -5,6 +5,7 @@
 .enerbox{
     display: inline-block;
     width: 180px;
+    
 }
 .pultbox{
     display: inline-block;
@@ -66,6 +67,7 @@
 .enterbox {
     position: relative;
     z-index: 1;
+    padding-left: 50px;
 }
 #entertext2{
     margin-left: 90px;;
@@ -168,6 +170,23 @@
     z-index: 2;
     background: rgb(135, 135, 226);
     /* color: #fff;  */
+}
+
+element.style {
+}
+#bring1 {
+    position: absolute;
+    top: 3px;
+    left: -7px;
+    z-index: 2;
+    background: rgb(226, 181, 32);
+}
+#bring2 {
+    position: absolute;
+    bottom: -102px;
+    left: -8px;
+    z-index: 2;
+    background: rgb(226, 181, 32);
 }
 
 #m {

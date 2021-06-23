@@ -29,7 +29,7 @@ let delthird = document.getElementById('delthird');
 let replace0 = document.getElementById('replace0');
 let dellast = document.getElementById('dellast');
 let wsp1 = document.getElementById('wsp1');
-
+let addbring1 = document.getElementById('bring1');
 // var subm = document.getElementById('sub');//button start
 // var subm1 = document.getElementById('sub1');//button start
 var subm2 = document.getElementById('sub2');//button start
@@ -122,6 +122,12 @@ dellast1.onclick = function () {
     arfromstr.splice(lastelnum, 1);
     string1.value = arfromstr.join(' ');
     subm1.disabled = false;
+}
+
+addbring1.onclick = function () {
+    let fst1 = st1.value.substr(0, st1.selectionStart); 
+    let lst1 = st1.value.substr(st1.selectionStart, st1.length);
+    st1.value=fst1.trim()+'&nbsp;'+lst1.trim()
 }
 
 //==================================================================
@@ -293,21 +299,7 @@ function trackScroll() {
         return array;
     }
 
-    // let delUnnecessarySign = function(str, sign1, sign2){// delete sign from word
-    //     let newarr = str.split(', ');
-    //     for (let i = 0; i < newarr.length; i++) {
-    //         let arfromword = newarr[i].split('');
-    //        console.log(arfromword);
-    //        for (let j = 0; j < arfromword.length; j++) {
-    //            if(arfromword[j] === sign1 || arfromword[j] === sign2){
-    //             arfromword.splice(j, 1);
-    //            }else{continue}
-    //        }
-    //        str=arfromword.join('');
-    //        console.log(str);
-    //     }
-    //     return str;
-    // }
+    
 
     
 

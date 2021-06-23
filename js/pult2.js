@@ -3,6 +3,7 @@ let val2 = document.getElementById('val2');
 let val_3 = document.getElementById('val_3');
 let val3 = document.getElementById('val3');
 let val4 = document.getElementById('val4');
+let addbring2 = document.getElementById('bring2');
 
 let keyword2 = document.getElementById('keyword2');
 let keyword3 = document.getElementById('keyword3');
@@ -21,6 +22,7 @@ let deng = document.getElementById('deng');
 let butval2OnClick = function (bval, bres, ftext, blockdang) {
     bval.disabled = true;
     bres.disabled = false;
+    //str.substr(str.selectionStart, 1);
     let newval = str2.value.substring(str2.selectionStart, str2.selectionEnd);
     newval = newval.trim();
     let newvalarr = newval.split(' ');
@@ -107,3 +109,12 @@ res4.onclick = function () {
 res5.onclick = function () {
     resetOnClick(keyword44, val4, res5, deng);
 }
+
+addbring2.onclick = function () {
+    let fstr2 = str2.value.substr(0, str2.selectionStart); 
+    let lstr2 = str2.value.substr(str2.selectionStart, str2.length);
+    str2.value=fstr2.trim()+'&nbsp;'+lstr2.trim()
+}
+let proba = 'Чайник&nbsp;Wellberg, Чайник&nbsp;Wellberg Kettle 2.5л тренд 2021 со&nbsp;свистком, Чайник&nbsp;Wellberg Kettle 2021 тренд, Kettle Чайник&nbsp;Wellberg 2021 тренд, Чайник&nbsp;Wellberg Kettle, Kettle Чайник&nbsp;Wellberg, Чайник&nbsp;Wellberg 2.5л, 2.5л Чайник&nbsp;Wellberg, Чайник&nbsp;Wellberg тренд, тренд Чайник&nbsp;Wellberg, Чайник&nbsp;Wellberg 2021, 2021 Чайник&nbsp;Wellberg, Чайник&nbsp;Wellberg со&nbsp;свистком, ';
+proba = proba.replace(/\&nbsp\;/gi, ' ');
+
