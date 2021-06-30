@@ -25,8 +25,8 @@ subm.onclick = function(){
     displayed_ind.innerHTML = stringIndex;
     subm.disabled = true;
     paste.onclick();
-    they.onclick();
-    subm1.onclick();
+    // they.onclick();
+    // subm1.onclick();
 }
 
 let delUnnecessarySign = function(str, sign1, sign2, sign3){// delete sign from word

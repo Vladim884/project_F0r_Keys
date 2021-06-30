@@ -9,6 +9,7 @@ subm5.onclick = function () {
     console.log(keys_finish);
     //==
     cells_row[2].innerHTML = keys_finish.join(', ');
+    cells_row[2].innerHTML= cells_row[2].innerHTML.replace(/\&nbsp\;/gi, ' ')
     
     // cells_row[2].innerHTML = cells_row[2].innerHTML.slice(0,1024);
     // typeof(cells_row[2].innerHTML);

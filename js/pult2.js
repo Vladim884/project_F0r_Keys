@@ -1,9 +1,17 @@
+let str_2 = document.getElementById('entertext2');
+
 let val1 = document.getElementById('val1');
 let val2 = document.getElementById('val2');
 let val_3 = document.getElementById('val_3');
 let val3 = document.getElementById('val3');
 let val4 = document.getElementById('val4');
 let addbring2 = document.getElementById('bring2');
+let delet1 = document.getElementById('delet1');
+let delet2 = document.getElementById('delet2');
+let swap1 = document.getElementById('swap1');
+let swap2 = document.getElementById('swap2');
+let mult = document.getElementById('mult');
+
 
 let keyword2 = document.getElementById('keyword2');
 let keyword3 = document.getElementById('keyword3');
@@ -69,20 +77,6 @@ val3.onclick = function () {
 val4.onclick = function () {
     butval3OnClick(val4, res5, keyword44, deng);
 }
-
-    // keyword4.value = str2.value.substring(str2.selectionStart, str2.selectionEnd);
-    // keyword4.value = keyword4.value.toLowerCase();
-    // keyword4.value = keyword4.value.trim();
-    // val3.disabled = true;
-// }
-// val4.onclick = function () {
-    // str2.value = str2.value.toLowerCase();
-//     keyword44.value = str2.value.substring(str2.selectionStart, str2.selectionEnd);
-//     keyword44.value = keyword44.value.toLowerCase();
-//     keyword44.value = keyword44.value.trim();
-//     val4.disabled = true;
-// }
-
 let resetOnClick = (field, butN, resN, blockdeng) => {
     field.value = '';
     butN.disabled = false;
@@ -110,11 +104,66 @@ res5.onclick = function () {
     resetOnClick(keyword44, val4, res5, deng);
 }
 
-addbring2.onclick = function () {
+addbring2.onclick = () => {
     let fstr2 = str2.value.substr(0, str2.selectionStart); 
     let lstr2 = str2.value.substr(str2.selectionStart, str2.length);
-    str2.value=fstr2.trim()+'&nbsp;'+lstr2.trim()
+    str2.value=fstr2.trim()+'&nbsp;'+lstr2.trim();
+   
 }
-let proba = 'Чайник&nbsp;Wellberg, Чайник&nbsp;Wellberg Kettle 2.5л тренд 2021 со&nbsp;свистком, Чайник&nbsp;Wellberg Kettle 2021 тренд, Kettle Чайник&nbsp;Wellberg 2021 тренд, Чайник&nbsp;Wellberg Kettle, Kettle Чайник&nbsp;Wellberg, Чайник&nbsp;Wellberg 2.5л, 2.5л Чайник&nbsp;Wellberg, Чайник&nbsp;Wellberg тренд, тренд Чайник&nbsp;Wellberg, Чайник&nbsp;Wellberg 2021, 2021 Чайник&nbsp;Wellberg, Чайник&nbsp;Wellberg со&nbsp;свистком, ';
-proba = proba.replace(/\&nbsp\;/gi, ' ');
+delet1.onclick = ()=>{
+    // let subs = str2.value.substr(str2.selectionStart, str2.selectionEnd);
+    // str2.value = str2.value.replace(subs, '');
+    let fstr2 = string1.value.substr(0, string1.selectionStart); 
+    let lstr2 = string1.value.substr(string1.selectionEnd, str2.length);
+    string1.value=fstr2.trim()+' '+lstr2.trim();
+}
+delet2.onclick = ()=>{
+    // let subs = str2.value.substr(str2.selectionStart, str2.selectionEnd);
+    // str2.value = str2.value.replace(subs, '');
+    let fstr2 = str2.value.substr(0, str2.selectionStart); 
+    let lstr2 = str2.value.substr(str2.selectionEnd, str2.length);
+    str2.value=fstr2.trim()+' '+lstr2.trim();
+}
+swap1.onclick = () => {
+    let subs = string1.value.substring(string1.selectionStart, string1.selectionEnd);
+    subs = subs.trim();
+    let arrsubs = subs.split(' ');
+    let x = arrsubs[0];
+    arrsubs[0] = arrsubs[arrsubs.length - 1];
+    arrsubs[arrsubs.length - 1] = x;
+    subs = arrsubs.join(' ');
+    let strstart = string1.value.substring(0, string1.selectionStart);
+    strstart = strstart.trim();
+    let strend = string1.value.substring(string1.selectionEnd, string1.value.length);
+    strend = strend.trim();
 
+    string1.value = strstart + ' ' + subs + ' ' + strend;
+    string1.value = string1.value.trim();
+}
+swap2.onclick = () => {
+    let subs = str2.value.substring(str2.selectionStart, str2.selectionEnd);
+    subs = subs.trim();
+    let arrsubs = subs.split(' ');
+    let x = arrsubs[0];
+    arrsubs[0] = arrsubs[arrsubs.length - 1];
+    arrsubs[arrsubs.length - 1] = x;
+    subs = arrsubs.join(' ');
+    let strstart = str2.value.substring(0, str2.selectionStart);
+    strstart = strstart.trim();
+    let strend = str2.value.substring(str2.selectionEnd, str2.value.length);
+    strend = strend.trim();
+
+    str2.value = strstart + ' ' + subs + ' ' + strend;
+    str2.value = str2.value.trim();
+}
+
+let changeWhiteSpase = function() {
+    let subs = string1.value.substring(string1.selectionStart, string1.selectionEnd);
+    subs = subs.split(' ').join('&nbsp;');
+    string1.value = string1.value.substring(0, string1.selectionStart) + 
+    subs +
+    string1.value.substring(string1.selectionEnd, string1.length);
+}
+mult.onclick = () => {
+    changeWhiteSpase();
+}
